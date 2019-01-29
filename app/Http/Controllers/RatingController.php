@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class RatingController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
+
     /**
      * @param Request $request
      * @param Book $book
